@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './App.css';
 import Alert from './components/Alert';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About from './components/About';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 // import {
@@ -52,19 +52,26 @@ function App() {
     }
   }
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
 
+    //   <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+    //   <Alert alert={alert} />
+    //   <div className="container my-3">
+    //     {/* <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} /> */}
+    //     <Routes>
+    //       <Route path='/' element={<TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode} />} />
+    //       <Route path='/about' element={<About mode={mode} />} />
+    //     </Routes>
+    //   </div>
+    // </BrowserRouter>
+
+    <>
       <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
-        {/* <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} /> */}
-        <Routes>
-          <Route path='/' element={<TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode} />} />
-          <Route path='/about' element={<About mode={mode} />} />
-        </Routes>
+        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
       </div>
-    </BrowserRouter>
-
+    </>
   );
 }
 

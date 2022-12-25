@@ -1,1 +1,5 @@
 Website link:https://hackergoliath.github.io/TextUtils-React/
+
+Requires:
+1. https://create-react-app.dev/docs/deployment/
+2. github desktop

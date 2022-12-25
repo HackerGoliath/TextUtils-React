@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css';
 import Alert from './components/Alert';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
@@ -51,51 +52,18 @@ function App() {
     }
   }
   return (
+    // <BrowserRouter>
     <>
-      {/* <Navbar title="TextUtils" aboutText="About TextUtils" /> */}
-      {/* <Navbar /> */}
       <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
         <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
+        {/* <Routes> */}
+        {/* <Route path='/' element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />} /> */}
+        {/* <Route path='/about' element={<About />} /> */}
+        {/* </Routes> */}
       </div>
-
-
-      {/* </Router>
-        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
-        <div className="container my-3">
-          <Switch>
-            <Route exact path="/">
-              <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
-            </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
-          </Switch>
-        </div>
-      </Router> */}
-
-
-      {/* <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
-      <div className="container my-3">
-        const router = createBrowserRouter(
-        createRoutesFromElements(
-        <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />}>
-          <Route path="about" element={<About />} />
-          {/* ... etc. */}
-      {/* </Route>
-        )
-        ); */}
-
-      {/* ReactDOM.createRoot(document.getElementById("root")).render(
-        <React.StrictMode>
-          <RouterProvider router={router} />
-        </React.StrictMode>
-        ); */}
-      {/* </div > */}
-
+      {/* </BrowserRouter> */}
     </>
   );
 }
